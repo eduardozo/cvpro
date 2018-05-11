@@ -3,6 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                @if(Auth::user()->name == "Admin")
                 <div class="card">
                     <div class="card-header">
                         <ul class="nav nav-pills card-header-pills">
@@ -36,6 +37,9 @@
                         </div>
                     </div>
                 </div>
+                @else
+                    <h4>You don't have admin permission</h4>
+                @endif
             </div>
         </div>
     </div>
